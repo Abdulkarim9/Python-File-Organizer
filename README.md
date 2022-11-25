@@ -3,7 +3,8 @@
 
 This basic python script moves any PDF, DOCX, XLSX, TXT, and IMAGES from Downloads directory to their own folder which will be created by this script. I coded this script to do this work for me if want to organize your files feel free to use it and also feel free to improve it if you wish.
 
-# For the (.pyw) extention i put it  in order to prevent a DOS console from popping up.
+For the (.pyw) extention i put it  in order to prevent a DOS console from popping up.
+
 # How to use?
 
 after downloading the script you can directly run it
@@ -22,10 +23,9 @@ after downloading the script you can directly run it
 
 4- you will be brought to startup directory now paste that short cut and that's it.
 
-# this script will run every 30 seconds but you can change the time if you would like to.
+
+this script will run every 30 seconds but you can change the time if you would like to.
 
 
 # Note that you need to restart your computer for the script to run.
 
-
-# if you have any questions feel free to ask.
