@@ -22,6 +22,8 @@ after downloading the script you can directly run it
 
 4- you will be brought to startup directory now paste that short cut and that's it.
 
+# this script will run every 30 seconds but you can change the time if you would like to.
+
 
 # Note that you need to restart your computer for the script to run.
 
