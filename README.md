@@ -9,7 +9,7 @@ This basic python script moves any PDF, DOCX, XLSX, TXT, and IMAGES from Downloa
 after downloading the script you can directly run it
 
 # if you want to make it run automaticly on windows startup (script will start anytime your computer starts).
-# follow these instructions
+# Follow these instructions
 
 1- Go to the folder where you put the script file
 
