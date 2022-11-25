@@ -11,8 +11,14 @@ after downloading the script you can directly run it
 # follow these instructions
 
 1- Go to the folder where you put the script file
+
+
 2- Create a shortcut of if. # in order to create a shortcut right click you will see (create shortcut in the bottom) click on it and shortcut will be created.
+
+
 3- cut the shortcut you created and press [windows+r] on your keyboard, a prompt will pop up in the bottom left side enter "shell:startup" and press Enter.
+
+
 4- you will be brought to startup directory now paste that short cut and that's it.
 
 
