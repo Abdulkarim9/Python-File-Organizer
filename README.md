@@ -1,16 +1,16 @@
-# python-file-manager-script
-# For windows
+## Python basic file manager script
+## For windows
 
 This basic python script moves any PDF, DOCX, XLSX, TXT, and IMAGES from Downloads directory to their own folder which will be created by this script. I coded this script to do this work for me if want to organize your files feel free to use it and also feel free to improve it if you wish.
 
 For the (.pyw) extention i put it  in order to prevent a DOS console from popping up.
 
-# How to use?
+## How to use?
 
 after downloading the script you can directly run it
 
-# if you want to make it run automaticly on windows startup (script will start anytime your computer starts).
-# Follow these instructions
+## if you want to make it run automaticly on windows startup (script will start anytime your computer starts).
+## Follow these instructions
 
 1- Go to the folder where you put the script file
 
@@ -27,5 +27,5 @@ after downloading the script you can directly run it
 this script will run every 30 seconds but you can change the time if you would like to.
 
 
-# Note that you need to restart your computer for the script to run.
+## Note that you need to restart your computer for the script to run.
 
