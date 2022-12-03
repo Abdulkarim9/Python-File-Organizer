@@ -49,6 +49,7 @@ def get_files():
 
 # Move files
 def move_files():
+    get_files()
               
     for f in files:
         file_path, file_extension = os.path.splitext(f)
@@ -76,5 +77,4 @@ def move_files():
 
 while True:
     time.sleep(30)
-    get_files()
     move_files()
