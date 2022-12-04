@@ -10,7 +10,7 @@ For this program to work you need to have python3 installed on you system
 
 if you don't you can download from this link https://www.python.org/downloads/
 
-after downloading the script you can directly run it in the command line by typing th following command
+after downloading the script you can directly run it in the command line by typing the following command
 ```bash
 python file_manager.pyw
 ```
