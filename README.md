@@ -5,7 +5,7 @@ This basic python script moves any PDF, DOCX, XLSX, TXT, and IMAGES from Downloa
 
 For the (.pyw) extention i put it  in order to prevent a DOS console from popping up.
 
-## How to use?
+### How to use?
 For this program to work you need to have python3 installed on you system
 
 if you don't you can download from this link https://www.python.org/downloads/
@@ -15,8 +15,8 @@ after downloading the script you can directly run it in the command line by typi
 python file_manager.pyw
 ```
 
-## if you want to make it run automaticly on windows startup (script will start anytime your computer starts).
-## Follow these instructions
+### if you want to make it run automaticly on windows startup (script will start anytime your computer starts).
+### Follow these instructions
 ```bash
 1- Go to the folder where you put the script file
 
@@ -33,5 +33,5 @@ python file_manager.pyw
 this script will run every 30 seconds but you can change the time if you would like to.
 
 
-## Note that you need to restart your computer for the script to run.
+### Note that you need to restart your computer for the script to run.
 
