@@ -67,7 +67,7 @@ def move_files():
                 shutil.move(f, destination + '/EXCEL')
                 # print(f'{f} moved successfully')
             elif file_extension == '.png' or file_extension == '.jpg' or file_extension == '.jpeg':
-                img_dir = os.path.join(home_path, "Saved Pictures")
+                img_dir = os.path.join(home_path, "Pictures/Saved Pictures")
                 shutil.move(f, img_dir)
         else:
             continue
