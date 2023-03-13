@@ -12,7 +12,7 @@ if you don't you can download from this link https://www.python.org/downloads/
 
 after downloading the script you can directly run it in the command line by typing the following command
 ```bash
-python file_manager.pyw
+python file_organizer.pyw
 ```
 
 ### If you want to make it run automaticly on windows startup (script will start anytime your computer starts).
