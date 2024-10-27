@@ -4,77 +4,58 @@ from pathlib import Path
 import time
 
 
-# Get home path
-home_path = Path.home()
-# Creating needed folders
-folders_list = ["PDF", "DOCX", "EXCEL", "TXT"]
-# Path to directory to create folders in 
-documents_dir = os.path.join(home_path, "Documents")
+def organize_downloads():
+    """Organizes files in the Downloads folder based on their extensions."""
+
+    home_path = Path.home()
+
+    target_folders = [
+        home_path / "Downloads",
+        home_path / "Desktop",
+    ]
+
+    documents_path = home_path / "Documents"
+
+    # Create destination folders if they don't exist
+    folder_list = ["PDF", "DOCX", "EXCEL", "TXT", "PowerPoint", "Saved-Pictures"]
+    for folder in folder_list:
+        folder_path = documents_path / folder
+        folder_path.mkdir(exist_ok=True)
+
+    # Define file extensions and their corresponding destination folders
+    file_extensions_mapping = {
+        ".pdf": "PDF",
+        ".docx": "DOCX",
+        ".txt": "TXT",
+        ".xlsx": "EXCEL",
+        ".pptx": "PowerPoint",
+        (".png", ".jpg", ".jpeg"): "Saved-Pictures",
+    }
+
+    while True:
+        for folder in target_folders:
+            for filename in os.listdir(folder):
+                file_path = folder / filename
+                
+                if file_path.is_file():
+                    extension = file_path.suffix.lower()
+                    destination_folder = None
+
+                    # Determine the destination folder based on the file extension
+                    for key, value in file_extensions_mapping.items():
+                        if (isinstance(key, tuple) and extension in key) or extension == key:
+                            destination_folder = value
+                            break
+
+                    if destination_folder:
+                        destination_path = documents_path / destination_folder
+                        if destination_folder == "Saved-Pictures":
+                            destination_path = home_path / "Saved-Pictures"
+                        destination_path.mkdir(exist_ok=True)  # Ensure folder exists
+                        shutil.move(file_path, destination_path)
+
+        time.sleep(30)
 
 
-# Looping over folders list
-for folder in folders_list:
-    # Joining folder with parent directory
-    path = os.path.join(documents_dir, folder)
-    # Check if folder already exists
-    if not os.path.exists(path):
-        # If it doesn't exist create
-        os.mkdir(path)
-    else:
-        # If it exists don't create
-        # print(f"{folder}: This folder already exists!")
-        continue
-
-
-# creating file extension list
-file_extensions = ['.txt', '.docx', '.pdf', '.xlsx', '.png', '.jpg', '.jpeg']
-downloads_path = os.path.join(home_path, "Downloads")
-
-# Change directory to files directory
-os.chdir(downloads_path)
-
-destination = documents_dir
-# Create a list to store files
-files = []
-
-# Get files
-def get_files():
-
-    for file in os.listdir():
-        if os.path.exists(file):
-            file_path, file_extension = os.path.splitext(file)
-            if file_extension in file_extensions:
-                files.append(file)
-
-
-# Move files
-def move_files():
-    get_files()
-              
-    for f in files:
-        file_path, file_extension = os.path.splitext(f)
-        if os.path.exists(f):
-            if file_extension == '.pdf':
-                shutil.move(f, destination + '/PDF')
-                # print(f'{f} moved successfully')
-            elif file_extension == '.docx':
-                shutil.move(f, destination + '/DOCX')
-                # print(f'{f} moved successfully')
-            elif file_extension == '.txt':
-                shutil.move(f, destination + '/TXT')
-                # print(f'{f} moved successfully')
-            elif file_extension == '.xlsx':
-                shutil.move(f, destination + '/EXCEL')
-                # print(f'{f} moved successfully')
-            elif file_extension == '.png' or file_extension == '.jpg' or file_extension == '.jpeg':
-                img_dir = os.path.join(home_path, "Pictures/Saved Pictures")
-                shutil.move(f, img_dir)
-        else:
-            continue
-            # print(f"{f} doesn't exist or already moved")
-
-
-
-while True:
-    time.sleep(30)
-    move_files()
+if __name__ == "__main__":
+    organize_downloads()
