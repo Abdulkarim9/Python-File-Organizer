@@ -1,7 +1,7 @@
 ## Python basic file manager script
 ## For windows
 
-This basic python script moves any PDF, WORD, EXCEL, TEXT files and IMAGES from Downloads directory to their own folder which will be created by this script. I coded this script to do this work for me if want to organize your files feel free to use it and also feel free to improve it if you wish.
+This basic python script moves any PDF, WORD, EXCEL, TEXT files and IMAGES from Downloads and Desktop directories to their own folder which will be created by this script. I coded this script to do this work for me if want to organize your files feel free to use it and also feel free to improve it if you wish.
 
 For the (.pyw) extention i put it  in order to prevent a DOS console from popping up.
 
