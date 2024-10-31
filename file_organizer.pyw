@@ -3,7 +3,6 @@ import shutil
 from pathlib import Path
 import time
 
-
 def organize_downloads():
     """Organizes files in the Downloads folder based on their extensions."""
 
@@ -17,7 +16,7 @@ def organize_downloads():
     documents_path = home_path / "Documents"
 
     # Create destination folders if they don't exist
-    folder_list = ["PDF", "DOCX", "EXCEL", "TXT", "PowerPoint", "Saved-Pictures"]
+    folder_list = ["PDF", "DOCX", "EXCEL", "TXT", "PowerPoint"]
     for folder in folder_list:
         folder_path = documents_path / folder
         folder_path.mkdir(exist_ok=True)
@@ -48,14 +47,24 @@ def organize_downloads():
                             break
 
                     if destination_folder:
-                        destination_path = documents_path / destination_folder
-                        if destination_folder == "Saved-Pictures":
-                            destination_path = home_path / "Saved-Pictures"
-                        destination_path.mkdir(exist_ok=True)  # Ensure folder exists
+                        # Define the destination path
+                        destination_path = (
+                            home_path / "Saved-Pictures" if destination_folder == "Saved-Pictures"
+                            else documents_path / destination_folder
+                        )
+
+                        # Path of the target file in the destination folder
+                        destination_file_path = destination_path / filename
+
+                        # Check if the file already exists in the destination folder
+                        if destination_file_path.is_file():
+                            os.remove(destination_file_path)  # Remove existing file
+
+                        # Ensure the destination folder exists and move the file
+                        destination_path.mkdir(exist_ok=True)
                         shutil.move(file_path, destination_path)
 
         time.sleep(30)
-
 
 if __name__ == "__main__":
     organize_downloads()
