@@ -3,8 +3,7 @@ import shutil
 from pathlib import Path
 import time
 
-def organize_downloads():
-    """Organizes files in the Downloads folder based on their extensions."""
+def organize_files():
 
     home_path = Path.home()
 
@@ -67,4 +66,4 @@ def organize_downloads():
         time.sleep(30)
 
 if __name__ == "__main__":
-    organize_downloads()
+    organize_files()
