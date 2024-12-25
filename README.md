@@ -6,7 +6,7 @@ This basic python script moves any PDF, WORD, EXCEL, TEXT files and IMAGES from 
 For the (.pyw) extention i put it  in order to prevent a DOS console from popping up.
 
 ### How to use?
-For this program to work you need to have python3 installed on you system
+For this program to work you need to have python3 installed on your system
 
 if you don't you can download from this link https://www.python.org/downloads/
 
